@@ -1,5 +1,66 @@
 <script>
+function println(msg) {
+        document.write( msg+ "<br/>")
+    }  
+
+    let member = []
+    let key
+    let idx 
+    let menu 
+    let seq
+    let id
 
 
+    seq = 0
+    while(1){
+        println("1.new member  2.searchID  0 exit")
+        menu = Number(prompt("sleect menu :"))
+        println("selected menu :" + menu)
+        if(menu == 0){
+            break
+        }
+        if(menu == 1){
+            id =join()
+            if(indexOf_id(id)== -1){
+                member[seq] = id
+                view_member(member[seq]);
+                seq += 1
+            }else{
+                println("can`t be new member")
+            }
+        }
+        if(menu == 2){
+            key = prompt("search id :")
+            idx = indexOf_id(key)
+            if(idx == -1){
+            println("no such id")
+    }else{
+        println(idx + " : "+ member[idx])
+    }
+        }
+        println("----------------------------")
+    }
+
+    function indexOf_id(key) {
+        let max = member.length
+    for(let i=0;i<max;i++){
+        if(key == member[i]){
+            return i;
+        }
+        //println(i+" : "+ member[i])
+    }
+    return -1
+    }
+
+    function view_member(mem){
+        println("id :"+ mem)
+    }
+    function join(){
+        let id = prompt("member id :")
+        return id
+
+    }
     
-</script>
+
+   
+</script>   
