@@ -1,0 +1,38 @@
+<html>
+  <script>
+
+    let user_id 
+    let user_pw   
+    let join_state = join()   //회원가입
+    if(join_state == false){
+        println("회원가입이 실패하였습니다.")
+    }else{
+        println("회원가입이 성공하였습니다")
+        println(user_id+"님이 가입하셨습니다.")
+    }
+
+    function println(msg) {
+        document.write( msg+ "<br/>")
+    }  
+    
+    println(user_id)
+    println(user_pw)
+
+    function join(){
+     let result = false
+       user_id = prompt("id입력하세요","")
+       user_pw = prompt("암호입력하세요","")
+         if(user_id == ""|| user_pw==""){
+           println("입력된 것이 없습니다.")
+           }else{
+               result = true
+           }
+       
+       return result
+    }
+
+  </script>
+  <body>
+    
+  </body>
+</html>

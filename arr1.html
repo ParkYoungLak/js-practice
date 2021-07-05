@@ -1,0 +1,17 @@
+<script>
+let titles = []
+
+for(let i = 0 ; i< 3 ; i++){
+    titles.push(prompt('tilte : '))
+
+}
+
+for(let i = 0; i<3;i++){
+    document.write(titles[i] + "<br/>")
+}
+document.write("<hr/>")
+
+for(let i=0;i<3;i++){
+    document.write(titles.pop()+"<br/>")
+}
+</script>

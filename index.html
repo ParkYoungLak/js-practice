@@ -1,0 +1,19 @@
+<html>
+  <script>
+    function caller( ){
+      let msg = "caller message <br/>"
+      callee(msg)
+      document.write(msg)
+    }
+    function callee(m){
+      document.write("callee" +m+  "<br/>")
+      m = "callee message"
+      document.write("callee" +m+ "<br/>")
+    }
+    caller()
+    // caller -> callee -> caller
+  </script>
+  <body>
+    
+  </body>
+</html>
