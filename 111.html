@@ -1,0 +1,31 @@
+<script>
+let Member = []
+let seq = 0
+
+
+
+join()
+join()
+
+list()
+
+function join() {
+    let user = []
+user[0] = prompt("member name")
+user[1] = prompt("member id")
+user[2] = prompt("member password")
+Member[seq] = user
+seq++
+}
+
+function list() {
+    for( let k=0;k<seq;k++){
+    let cols = Member[k].length
+    for(let i=0;i<cols;i++){
+        document.write(Member[k][i]+" : ")
+    }
+    document.write("<br/>")
+  } 
+}
+
+</script>

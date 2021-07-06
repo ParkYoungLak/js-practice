@@ -1,8 +1,9 @@
-var iData;
-var Name, Age;
+let ar1 = [];
 
+ar1[0] = 1
+ar1[1] = 2
+ar1[2] = 3
 
-//비교연산자
-
-document.write( 10 == 10)
-
+for(let i=0;i<3; i++){
+    document.write(ar1[i]+"<br/>")
+}
